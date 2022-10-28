@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --content-font:'PT Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    align-items: center;
+    background-image: linear-gradient(180deg, #b295d4, #9d80cb);
+    overflow: hidden;
+}
+
+.search-dock {
+    position: relative;
+    height: 48px;
+}
+
+.search-dock .input {
+    height: 48px;
+    width: 54px;
+    padding: 12px;
+    font-family: var(--content-font);
+    font-size: 17px;
+    background: #fff;
+    border: none;
+    transition: width 0.2s ease;
+}
+
+.btn {
+    height: 48px;
+    width: 54px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 22px;
+    background: #fff;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.btn:focus,
+.input:focus {
+    outline: none;
+}
+
+.search-dock.active .input {
+    width: 220px;
+}
+
+.search-dock.active .btn {
+    transform: translateX(218px);
+}
